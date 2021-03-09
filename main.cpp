@@ -11,17 +11,17 @@ int main()
 
 	//Font
 	Font font;
-	font.loadFromFile("Fonts/Masked Hero.ttf");
+	font.loadFromFile("Fonts/lsb.otf");
 
 	//Textures
 	Texture playerTex;
-	playerTex.loadFromFile("Textures/ship.png");
+	playerTex.loadFromFile("Textures/blue.png");
 
 	Texture enemyTex;
-	enemyTex.loadFromFile("Textures/enemy.png");
+	enemyTex.loadFromFile("Textures/sprite_0.png");
 
 	Texture bulletTex;
-	bulletTex.loadFromFile("Textures/missileTex01.png");
+	bulletTex.loadFromFile("Textures/bullet.png");
 
 	//Set UI
 	Text scoreText;

@@ -1,4 +1,3 @@
-#pragma once
 #include<iostream>
 #include"SFML\Graphics.hpp"
 #include"SFML\Window.hpp"
@@ -9,7 +8,7 @@
 using namespace sf;
 
 /**
- * Bullet class 
+ * Bullet class
  * size and pos of the bullet.
  */
 class Bullet
@@ -21,7 +20,7 @@ public:
 	{
 		this->shape.setTexture(*texture);
 
-		this->shape.setScale(0.07f, 0.07f);
+		this->shape.setScale(1.0f, 1.0f);
 
 		this->shape.setRotation(90);
 
@@ -56,11 +55,11 @@ public:
 		this->texture = texture;
 		this->shape.setTexture(*texture);
 
-		this->shape.setScale(0.1f, 0.1f);
+		this->shape.setScale(1.5f, 1.5f);
 
-		this->shape.setRotation(270);
+		this->shape.setRotation(0);
 
-		this->shape.setPosition(370, 600);
+		this->shape.setPosition(370, 520);
 	}
 
 	~Player() {}
@@ -82,14 +81,14 @@ public:
 
 	Enemy(Texture* texture, Vector2u windowSize)
 	{
-		this->HPMax = 1;
+		this->HPMax = 2;
 		this->HP = this->HPMax;
 
 		this->shape.setTexture(*texture);
 
-		this->shape.setScale(0.1f, 0.1f);
+		this->shape.setScale(5.0f, 5.0f);
 
-		this->shape.setRotation(270);
+		this->shape.setRotation(0);
 
 		this->shape.setPosition(rand() % (int)windowSize.x - this->shape.getGlobalBounds().width, 0);
 	}
